@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8"/>
+    <script src="albersProjection.js"></script>
+    <script>
+        var polygonCoordinates = [
+                    [-10.812317, 18],
+                    [10.812317, -18],
+                    [26.565051, 18],
+                    [52.622632, -18],
+                    [52.622632, 54],
+                    [10.812317, 54],
+                    [-10.812317, 18]
+                ];
+            var projectedCoordinates = [];
+            polygonCoordinates.forEach(function (point) {
+                projectedCoordinates.push(fromCoordsToMeters(point));
+            });
+
+            console.log(calculateArea(projectedCoordinates));
+    </script>
+</head>
+</html>
